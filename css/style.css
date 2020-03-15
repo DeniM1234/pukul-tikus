@@ -1,0 +1,71 @@
+html {
+    background: #ffde7f;
+
+}
+h1, h2, h3 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+h2 {
+    font-size: 90px;
+    margin: 10px;
+}
+.mulai, .stop {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    cursor: all-scroll;
+}
+.tanah {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.balok {
+    width: 200px;
+    height: 20px;
+    background-color: #ffde7f;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.bonk{
+    width: 100%;
+    background: url(../img/bonk-min.png) center no-repeat;
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    bottom: 0px;
+    display: none;
+}
+.tanah::after {
+    content: '';
+    display: block;
+    width: 200px;
+    background: url(../img/dart.svg) bottom center no-repeat;
+    height: 100px;
+    background-size: 80%;
+    position: absolute;
+    bottom: -2px;
+    z-index: 2;
+}
+.tikus {
+    width: 100%;
+    height: 90%;
+    background: url(../img/mole.svg) bottom center no-repeat;
+    background-size: 60%;
+    background-position: top;
+    position: absolute;
+    top: 170px;
+    transition: top 0.3s;
+}
+.tanah.muncul .tikus {
+    top: 20px;
+}
